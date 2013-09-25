@@ -1,0 +1,41 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: "Source Sans Pro", $helvetica;
+$serif: $georgia;
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(5);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$red: #dc4036;
+$blue: #1f5b98;
+$dark-gray: #787878;
+$medium-gray: #999;
+$light-gray: #bcbcbc;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+//  Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $blue;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Border color
+$base-border-color: lighten($light-gray, 15);
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;

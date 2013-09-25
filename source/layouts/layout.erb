@@ -11,28 +11,32 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <header>
+    <header class="main">
       <nav>
-        <ul class="social-links">
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="http://twitter.com/phillyrb">Twitter</a></li>
-          <li><a href="#">Mailing list</a></li>
-        </ul>
         <h1 class="logo">
           <a href="#">Philly.rb</a>
         </h1>
-        <ul>
+
+        <ul class="social-links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="http://twitter.com/phillyrb">Twitter</a></li>
+          <li><a href="https://groups.google.com/forum/#!forum/phillyrb">Mailing list</a></li>
+        </ul>
+
+        <ul class="engagement">
           <li><a href="#">Submit talk</a></li>
           <li><a href="#">RSVP on Meetup</a></li>
         </ul>
       </nav>
     </header>
 
-    <%= yield %>
+    <section class="main">
+      <%= yield %>
+    </section>
 
-    <footer>
-      <p>Organized by <a href="#">@jearvon</a></p>
-      <p>Designed by <a href="#">@thoughtbot</a></p>
+    <footer class="main">
+      <p>Organized by <a href="http://twitter.com/jearvon">@jearvon</a></p>
+      <p>Designed by <a href="http://twitter.com/thoughtbot">@thoughtbot</a></p>
       <h1>Philly.rb</h1>
     </footer>
   </body>

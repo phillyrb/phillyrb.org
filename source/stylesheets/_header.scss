@@ -1,0 +1,57 @@
+header.main {
+  @include outer-container;
+  position: relative;
+  padding: 3em 0 2em;
+
+  ul li {
+    @include inline-block;
+
+    a {
+      @extend %all-caps;
+    }
+  }
+
+  .social-links {
+    @include media(em(800)){
+      float: left;
+    };
+
+    li {
+      margin-right: .5em;
+    }
+
+    a {
+      color: $light-gray;
+
+      &:hover {
+        color: $hover-link-color;
+      }
+    }
+  }
+
+  .logo {
+    @include position(absolute, .5em 50% 0 0);
+
+    a {
+      @include hide-text();
+      display: block;
+      background-image: image-url('phillyrb.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 73px;
+      width: 220px;
+      margin-right: -110px;
+    }
+  }
+
+  .engagement {
+    li {
+      margin-left: .5em;
+    }
+
+    @include media(em(800)){
+      float: right;
+    };
+  }
+}
