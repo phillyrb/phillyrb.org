@@ -1,0 +1,12 @@
+.connect-with {
+  @extend %three-col;
+  @extend %section-vertical-padding;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    @extend %all-caps;
+  }
+}

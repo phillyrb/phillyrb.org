@@ -1,0 +1,20 @@
+%section-side-padding {
+  padding: 0 2em;
+}
+
+%section-vertical-padding {
+  padding: 4em 0 3em;
+}
+
+%three-col {
+  @include row;
+
+  li {
+    @include span-columns(4);
+    @extend %section-side-padding;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}

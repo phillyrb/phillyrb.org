@@ -1,0 +1,30 @@
+.about-phillyrb {
+  @extend %three-col;
+  @extend %section-vertical-padding;
+
+  li {
+    &:before {
+      @include size(4em);
+      background-color: $red;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      border-radius: 50%;
+      content: " ";
+      display: block;
+      margin: 0 auto 1em;
+    }
+
+    &.socialize:before {
+      background-image: image-url('people.svg');
+    }
+
+    &.network:before {
+      background-image: image-url('network.svg');
+    }
+
+    &.learn:before {
+      background-image: image-url('education.svg');
+    }
+  }
+}

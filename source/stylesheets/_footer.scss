@@ -1,19 +1,20 @@
 footer.main {
-  background: image-url('philly-header.jpg') no-repeat center;
-  text-align: center;
+  background: image-url('philly-skyline.jpg') no-repeat center;
   color: #fff;
   padding: 4em;
+  text-align: center;
+  margin-top: 2em;
 
   @include media(em(1200)) {
     background-size: cover;
   };
 
   h1 {
-    margin: 2rem auto;
     @include hide-text();
-    @include size(95px);
+    @include size(115px);
     background: image-url('ruby-bell-white.svg') center no-repeat;
     background-size: cover;
+    margin: 2rem auto;
   }
 
   p {

@@ -1,23 +1,24 @@
 header.main {
   @include outer-container;
-  position: relative;
   padding: 3em 0 2em;
+  position: relative;
 
   ul li {
     @include inline-block;
 
     a {
       @extend %all-caps;
+      font-size: em(14);
     }
   }
 
   .social-links {
-    @include media(em(800)){
+    @include media($medium-screen){
       float: left;
     };
 
     li {
-      margin-right: .5em;
+      margin-right: 1em;
     }
 
     a {
@@ -34,23 +35,23 @@ header.main {
 
     a {
       @include hide-text();
-      display: block;
       background-image: image-url('phillyrb.svg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      display: block;
       height: 73px;
-      width: 220px;
       margin-right: -110px;
+      width: 220px;
     }
   }
 
   .engagement {
     li {
-      margin-left: .5em;
+      margin-left: 1em;
     }
 
-    @include media(em(800)){
+    @include media($medium-screen){
       float: right;
     };
   }

@@ -1,0 +1,19 @@
+.sponsors {
+  @include row;
+  @extend %section-vertical-padding;
+
+  h1 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  li {
+    @include span-columns(3);
+
+    &.sponsor {
+      border: 1px solid $base-border-color;
+      padding: 1em;
+      text-align: center;
+    }
+  }
+}

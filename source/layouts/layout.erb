@@ -8,6 +8,8 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>
+    <script type="text/javascript" src="//use.typekit.net/xfb2ejw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
 
   <body class="<%= page_classes %>">
@@ -18,7 +20,6 @@
         </h1>
 
         <ul class="social-links">
-          <li><a href="/blog">Blog</a></li>
           <li><a href="http://twitter.com/phillyrb">Twitter</a></li>
           <li><a href="https://groups.google.com/forum/#!forum/phillyrb">Mailing list</a></li>
         </ul>

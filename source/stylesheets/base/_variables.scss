@@ -1,6 +1,6 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: "Source Sans Pro", $helvetica;
+$sans-serif:  "Source Sans Pro", $helvetica;
 $serif: $georgia;
 
 $base-font-family: $sans-serif;
@@ -8,7 +8,7 @@ $header-font-family: $base-font-family;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////
-$base-font-size: 1em;
+$base-font-size: em(17);
 $base-line-height: $base-font-size * 1.5;
 $base-border-radius: em(5);
 

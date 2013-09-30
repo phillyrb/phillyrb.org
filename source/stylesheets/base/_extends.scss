@@ -27,7 +27,7 @@
   @include linear-gradient(lighten($base-accent-color, 20), $base-accent-color);
   border-radius: $base-border-radius;
   color: #fff;
-  font-size: em(18);
+  font-size: 1em;
   padding: em(8) em(12);
 
   &:hover {
