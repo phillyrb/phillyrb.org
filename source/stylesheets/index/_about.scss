@@ -33,5 +33,10 @@
       background-image: image-url('education.svg');
     }
 
+    &:hover {
+      &:before {
+        @extend %bounce;
+      }
+    }
   }
 }

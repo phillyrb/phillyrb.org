@@ -17,6 +17,7 @@ header.main {
   };
 
   ul li {
+    @extend %fade-in;
     @include inline-block;
 
     a {
@@ -50,6 +51,7 @@ header.main {
 
   .logo {
     @include position(absolute, .65em 50% 0 0);
+    @extend %slide-in-down;
 
     a {
       @include hide-text();

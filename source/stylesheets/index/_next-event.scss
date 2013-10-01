@@ -1,5 +1,6 @@
 .next-event {
   background: #fff;
+  @extend %slide-in-up;
 
   @include media($medium-screen) {
     @include row(table);

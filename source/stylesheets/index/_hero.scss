@@ -14,6 +14,8 @@
     color: rgba(#fff, .9);
     line-height: 1.1em;
     letter-spacing: -1px;
+    @extend %fade-in;
+    @include animation-delay(.4s);
 
     @include media($medium-screen) {
       font-size: em(38);
