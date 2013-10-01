@@ -1,13 +1,4 @@
 ###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -36,14 +27,33 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+ activate :livereload
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+###
+# Blog settings
+###
+
+# Time.zone = "UTC"
+
+activate :blog do |blog|
+   blog.prefix = "videos"
+  # blog.permalink = ":year/:month/:day/:title.html"
+  # blog.sources = ":year-:month-:day-:title.html"
+  # blog.taglink = "tags/:tag.html"
+  blog.layout = "blog-layout"
+  # blog.summary_separator = /(READMORE)/
+  # blog.summary_length = 250
+  # blog.year_link = ":year.html"
+  # blog.month_link = ":year/:month.html"
+  # blog.day_link = ":year/:month/:day.html"
+  # blog.default_extension = ".markdown"
+
+  blog.paginate = true
+  blog.per_page = 2
+  # blog.page_link = "page/:num"
+end
+
+page "/feed.xml", :layout => false
 
 set :css_dir, 'stylesheets'
 
@@ -51,10 +61,12 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
@@ -68,3 +80,4 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+

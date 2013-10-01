@@ -3,6 +3,9 @@
 source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.5"
+gem "middleman-blog"
+gem "nokogiri"
+
 gem "bourbon"
 gem "neat"
 
