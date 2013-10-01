@@ -1,6 +1,8 @@
 .badges {
   @include row;
   @extend %section-vertical-padding;
+  padding-left: 2em;
+  padding-right: 2em;
 
   h1 {
     margin-bottom: 1em;

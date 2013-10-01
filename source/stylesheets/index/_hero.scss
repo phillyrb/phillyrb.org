@@ -1,11 +1,12 @@
 .hero {
-  background: image-url('philly-header.jpg') no-repeat center;
+  background: image-url('philly-header.jpg') no-repeat 80%;
+  background-size: cover;
   margin-bottom: -7em;
-  padding: 5em 0 12em;
+  padding: 5em 2em 12em;
   text-align: center;
 
-  @include media(em(1200)) {
-    background-size: cover;
+  @include media($max-width + 4em) {
+    padding: 5em 0 12em;
   };
 
   h1 {

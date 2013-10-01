@@ -1,11 +1,18 @@
 .next-event {
   background: #fff;
+
+  @include media($medium-screen) {
+    @include row(table);
+  };
 }
 
 .next-event-information {
-  @include span-columns(6, table);
-  vertical-align: middle;
   padding: 2em;
+
+  @include media($medium-screen) {
+    @include span-columns(6, table);
+    vertical-align: middle;
+  };
 
   header {
     margin-bottom: 1em;
@@ -46,6 +53,10 @@
 }
 
 .next-event-map {
-  @include span-columns(6, table);
-  background-color: $base-font-color;
+  height: em(250);
+
+  @include media($medium-screen) {
+    @include span-columns(6, table);
+    height: 100%;
+  };
 }

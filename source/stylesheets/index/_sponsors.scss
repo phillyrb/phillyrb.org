@@ -1,6 +1,8 @@
 .sponsors {
   @include row;
   @extend %section-vertical-padding;
+  padding-left: 2em;
+  padding-right: 2em;
 
   h1 {
     margin-bottom: 1em;
@@ -8,7 +10,23 @@
   }
 
   li {
-    @include span-columns(3);
+    margin-bottom: 1em;
+
+    @include media(min-width $small-screen max-width $medium-screen) {
+      @include span-columns(4);
+      margin-bottom: 0;
+      @include omega(3n);
+
+      &:last-child {
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+      }
+    };
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+    };
 
     &.sponsor {
       border: 1px solid $base-border-color;

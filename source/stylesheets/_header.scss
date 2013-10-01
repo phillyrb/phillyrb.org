@@ -1,7 +1,20 @@
 header.main {
   @include outer-container;
-  padding: 3em 0 2em;
+  padding: 6em 2em 1em;
   position: relative;
+  text-align: center;
+
+  @include media($small-screen) {
+    text-align: left;
+  };
+
+  @include media($medium-screen) {
+    padding: 3em 2em 2em;
+  };
+
+  @include media($max-width + 2em) {
+    padding: 3em 0 2em;
+  };
 
   ul li {
     @include inline-block;
@@ -13,8 +26,13 @@ header.main {
   }
 
   .social-links {
-    @include media($medium-screen){
+
+    @include media($small-screen) {
       float: left;
+    };
+
+    @include media($medium-screen){
+      margin-top: 0;
     };
 
     li {
@@ -49,9 +67,13 @@ header.main {
   .engagement {
     li {
       margin-left: 1em;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
 
-    @include media($medium-screen){
+    @include media($small-screen){
       float: right;
     };
   }
