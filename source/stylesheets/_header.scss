@@ -9,11 +9,11 @@ header.main {
   };
 
   @include media($medium-screen) {
-    padding: 3em 2em 2em;
+    padding: 2em 2em 2.5em;
   };
 
   @include media($max-width + 2em) {
-    padding: 3em 0 2em;
+    padding: 2em 0 2.5em;
   };
 
   ul li {
@@ -49,7 +49,7 @@ header.main {
   }
 
   .logo {
-    @include position(absolute, .5em 50% 0 0);
+    @include position(absolute, .65em 50% 0 0);
 
     a {
       @include hide-text();

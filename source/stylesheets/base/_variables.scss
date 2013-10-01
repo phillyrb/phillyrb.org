@@ -1,10 +1,10 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif:  "Source Sans Pro", $helvetica;
-$serif: $georgia;
+$sans-serif: "franklin-gothic-urw", $helvetica;
+$serif: "abril-text", $georgia;
 
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$base-font-family: $serif;
+$header-font-family: $sans-serif;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////

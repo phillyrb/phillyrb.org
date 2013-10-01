@@ -1,6 +1,7 @@
 %primary-header {
-  font-size: em(30);
-  font-weight: 200;
+  font-size: em(24);
+  font-weight: bold;
+  font-family: $header-font-family;
 }
 
 %secondary-header {
@@ -12,6 +13,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
+  font-family: $header-font-family;
 }
 
 %section-header {
