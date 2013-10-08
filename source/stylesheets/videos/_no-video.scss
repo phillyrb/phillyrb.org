@@ -1,0 +1,10 @@
+.no-video {
+  @include media($medium-screen) {
+    max-width: flex-grid(6);
+    margin: 0 (flex-grid(3) + flex-gutter());
+  };
+
+  hr {
+    clear: both;
+  }
+}

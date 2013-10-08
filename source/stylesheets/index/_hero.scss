@@ -4,7 +4,11 @@
   padding: 4em 2em;
   text-align: center;
 
-  @include media($max-width + 4em) {
+  @include media($medium-screen) {
+    padding: 8em 2em;
+  };
+
+  @include media($max-width + 6em) {
     padding: 8em 0 14em;
     margin-bottom: -7em;
   };

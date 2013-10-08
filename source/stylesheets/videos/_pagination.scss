@@ -1,0 +1,20 @@
+nav.pagination {
+  text-align: center;
+
+  p {
+    @include inline-block;
+  }
+
+  a {
+    @extend %all-caps;
+    @include inline-block;
+    border-radius: $base-border-radius;
+    border: 1px solid $base-accent-color;
+    padding: em(4) em(8);
+    margin-right: .5em;
+
+    &:hover {
+      border-color: $hover-link-color;
+    }
+  }
+}
