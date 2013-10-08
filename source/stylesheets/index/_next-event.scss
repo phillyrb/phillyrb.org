@@ -1,0 +1,62 @@
+.next-event {
+  background: #fff;
+  @extend %slide-in-up;
+
+  @include media($medium-screen) {
+    @include row(table);
+  };
+}
+
+.next-event-information {
+  padding: 2em;
+
+  @include media($medium-screen) {
+    @include span-columns(6, table);
+    vertical-align: middle;
+  };
+
+  header {
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    @extend %section-header;
+  }
+
+  h2 {
+    @extend %primary-header;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin-bottom: 2em;
+  }
+
+  h4 {
+    line-height: $base-line-height;
+  }
+
+  .speaker {
+    margin-bottom: 0;
+  }
+
+  .more {
+    @extend %all-caps;
+    @include inline-block;
+    margin-left: .5em;
+  }
+
+  a.rsvp {
+    @extend %button;
+    margin-top: 1.5em;
+  }
+}
+
+.next-event-map {
+  height: em(250);
+
+  @include media($medium-screen) {
+    @include span-columns(6, table);
+    height: 100%;
+  };
+}

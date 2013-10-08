@@ -1,0 +1,31 @@
+footer.main {
+  background: image-url('philly-skyline.jpg') no-repeat center;
+  color: #fff;
+  padding: 4em;
+  text-align: center;
+  margin-top: 2em;
+
+  @include media(em(1200)) {
+    background-size: cover;
+  };
+
+  h1 {
+    @include hide-text();
+    @include size(115px);
+    background: image-url('ruby-bell-white.svg') center no-repeat;
+    background-size: cover;
+    margin: 2rem auto;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: rgba(#fff, .6);
+    }
+  }
+}

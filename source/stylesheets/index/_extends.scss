@@ -1,0 +1,37 @@
+%section-side-padding {
+  padding: 0 2em;
+}
+
+%section-vertical-padding {
+  padding: 4em 0 3em;
+}
+
+%three-col {
+  @include row;
+
+  li {
+    @extend %section-side-padding;
+    @include row;
+    margin-bottom: 1em;
+
+    @include media($medium-screen) {
+      @include span-columns(4);
+      margin-bottom: 0;
+    };
+
+    h1 {
+      text-align: center;
+
+      @include media(min-width $small-screen max-width $medium-screen) {
+        text-align: left;
+        @include span-columns(4);
+      };
+    }
+
+    p {
+      @include media(min-width $small-screen max-width $medium-screen) {
+        @include span-columns(7);
+      };
+    }
+  }
+}

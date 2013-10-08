@@ -1,0 +1,69 @@
+.sponsors {
+  @include row;
+  @extend %section-vertical-padding;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  h1 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  li {
+    margin-bottom: 1em;
+
+    @include media(min-width $small-screen max-width $medium-screen) {
+      @include span-columns(6);
+      @include omega(2n);
+
+      &.contact {
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+      }
+    };
+
+    @include media($medium-screen) {
+      @include span-columns(3);
+      margin-bottom: 0;
+      @include omega(4n);
+
+      &.contact {
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+      }
+    };
+
+    &.sponsor {
+      border: 1px solid $base-border-color;
+      padding: 1em;
+      text-align: center;
+
+      a {
+        @include hide-text();
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 100px;
+        background-size: 70%;
+      }
+    }
+
+    &.comcast a {
+      background-image: image-url('comcast.svg');
+    }
+
+    &.pipeline a {
+      background-image: image-url('pipelinedeals.svg');
+    }
+
+    &.haydle a {
+      background-image: image-url('haydle.svg');
+    }
+
+    &.thoughtbot a {
+      background-image: image-url('thoughtbot.svg');
+    }
+  }
+}

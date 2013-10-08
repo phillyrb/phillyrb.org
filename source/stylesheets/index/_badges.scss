@@ -1,0 +1,35 @@
+.badges {
+  @include row;
+  @extend %section-vertical-padding;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  h1 {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  ul {
+    text-align: center;
+
+    li {
+      @include inline-block;
+
+      &:after {
+        @include inline-block;
+        background: $base-border-color;
+        content: " ";
+        height: 40px;
+        margin: 0 2em;
+        position: relative;
+        top: -1em;
+        width: 1px;
+      }
+
+      &:last-child:after {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
