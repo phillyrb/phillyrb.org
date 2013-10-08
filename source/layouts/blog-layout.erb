@@ -14,7 +14,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
     <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
 
@@ -23,10 +23,21 @@
     <%= partial "layouts/header" %>
 
     <section class="main">
-      <%= yield %>
+      <article class="video">
+        <div class="video-container">
+          <iframe width="960" height="720" src="<%= current_article.data.video %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+
+        <section class="video-text">
+          <h1><%= current_article.title %></h1>
+          <time><%= current_article.date.strftime('%b %e, %Y') %></time>
+          <%= yield %>
+        </section>
+      </article>
     </section>
 
     <%= partial "layouts/footer" %>
 
   </body>
 </html>
+

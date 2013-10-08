@@ -1,0 +1,64 @@
+.news-section {
+  @include row;
+  @extend %section-vertical-padding;
+
+  h1 {
+    @extend %section-header;
+  }
+}
+
+.last-months-presentation {
+  @extend %section-side-padding;
+
+  @include media($medium-screen) {
+    @include span-columns(8);
+  };
+
+  .video {
+    @include media(min-width $small-screen max-width $medium-screen) {
+      @include span-columns(6);
+    };
+
+    @include media($medium-screen) {
+      @include span-columns(4 8);
+    };
+  }
+
+  .about-presentation {
+    &.with-video{
+      @include media(min-width $small-screen max-width $medium-screen) {
+        @include span-columns(6);
+      };
+
+      @include media($medium-screen) {
+        @include span-columns(4 8);
+      };
+    }
+
+    h2 {
+      @extend %primary-header;
+    }
+  }
+}
+
+.latest-blog-posts {
+  @extend %section-side-padding;
+
+  @include media($medium-screen) {
+    @include span-columns(4);
+  };
+
+  li {
+    margin-bottom: $base-line-height / 2;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+time {
+  color: $light-gray;
+  font-style: italic;
+}
+
