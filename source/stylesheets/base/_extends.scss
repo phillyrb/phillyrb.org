@@ -1,0 +1,38 @@
+%primary-header {
+  font-size: em(24);
+  font-weight: bold;
+  font-family: $header-font-family;
+}
+
+%secondary-header {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+%all-caps {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: $header-font-family;
+}
+
+%section-header {
+  @extend %all-caps;
+  font-size: em(14, 16);
+  color: $light-gray;
+  margin-bottom: 1em;
+}
+
+%button {
+  @extend %all-caps;
+  @include inline-block;
+  @include linear-gradient(lighten($base-accent-color, 20), $base-accent-color);
+  border-radius: $base-border-radius;
+  color: #fff;
+  font-size: 1em;
+  padding: em(8) em(12);
+
+  &:hover {
+    @include linear-gradient(lighten($base-accent-color, 5), darken($base-accent-color, 15));
+  }
+}

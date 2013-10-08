@@ -1,0 +1,25 @@
+.hero {
+  background: image-url('philly-header.jpg') no-repeat 80%;
+  background-size: cover;
+  padding: 4em 2em;
+  text-align: center;
+
+  @include media($max-width + 4em) {
+    padding: 8em 0 14em;
+    margin-bottom: -7em;
+  };
+
+  h1 {
+    @extend %fade-in;
+    @include animation-delay(.4s);
+    @include outer-container;
+    color: rgba(#fff, .9);
+    letter-spacing: -1px;
+    line-height: 1.1em;
+
+    @include media($medium-screen) {
+      font-size: em(38);
+      max-width: em(1000, 36);
+    };
+  }
+}

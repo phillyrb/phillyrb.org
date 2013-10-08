@@ -1,0 +1,68 @@
+@include keyframes(slide-in-down){
+  0% {
+    opacity: 0;
+    @include transform(translateY(-50px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+%slide-in-down {
+  @include animation(slide-in-down);
+  @include animation-fill-mode(both);
+  @include animation-duration(.6s);
+}
+
+@include keyframes(slide-in-up){
+  0% {
+    @include transform(translateY(50px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+%slide-in-up {
+  @include animation(slide-in-up);
+  @include animation-fill-mode(both);
+  @include animation-duration(.6s);
+}
+
+@include keyframes(fade-in){
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+%fade-in {
+  @include animation(fade-in);
+  @include animation-fill-mode(both);
+  @include animation-duration(1.5s);
+}
+
+@include keyframes(bounce){
+  0% {
+    @include transform(translateY(0));
+  }
+
+  50% {
+    @include transform(translateY(-20px));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+%bounce {
+  @include animation(bounce);
+  @include animation-fill-mode(both);
+  @include animation-duration(.5s);
+}
