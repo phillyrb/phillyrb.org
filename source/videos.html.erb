@@ -1,6 +1,7 @@
 ---
+title: Philly.rb video archive
 pageable: true
-per_page: 2
+per_page: 5
 ---
 
 <ol class="videos">
@@ -17,7 +18,7 @@ per_page: 2
 
       <div class="video-text">
         <h2><%= link_to article.title, article %> </h2>
-        <time><%= article.date.strftime('%b %e') %></time>
+        <time><%= article.date.strftime('%b %e, %Y') %></time>
         <%= article.body %>
       </div>
     </article>

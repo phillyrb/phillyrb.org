@@ -12,7 +12,7 @@ header.main {
     padding: 2em 2em 2.5em;
   };
 
-  @include media($max-width + 2em) {
+  @include media($max-width + 6em) {
     padding: 2em 0 2.5em;
   };
 

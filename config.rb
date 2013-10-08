@@ -48,8 +48,8 @@ activate :blog do |blog|
   # blog.day_link = ":year/:month/:day.html"
   # blog.default_extension = ".markdown"
 
-  blog.paginate = true
-  blog.per_page = 2
+  # blog.paginate = true
+  # blog.per_page = 6
   # blog.page_link = "page/:num"
 end
 

@@ -109,7 +109,7 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
-  middleman (~> 3.1.5)
+  middleman
   middleman-blog
   middleman-livereload (~> 3.1.0)
   neat

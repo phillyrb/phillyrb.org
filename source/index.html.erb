@@ -63,20 +63,20 @@ title: Philly.rb
 
         <h2><%= link_to blog.articles[0].title, blog.articles[0].url %></h2>
         <div><%= blog.articles[0].summary(200) %></div>
-        <time><%= blog.articles[0].date.strftime('%b %e') %></time>
+        <time><%= blog.articles[0].date.strftime('%b %e, %Y') %></time>
 
       </section>
     </article>
 
     <section class="latest-blog-posts">
-      <h1>Latest from our blog</h1>
+      <h1>Videos from past events</h1>
 
       <ol>
         <% blog.articles[1...3].each do |article| %>
           <li class="post">
             <h2><%= link_to article.title, article %></h2>
             <div><%= article.summary(80) %></div>
-            <time><%= article.date.strftime('%b %e') %></time>
+            <time><%= article.date.strftime('%b %e, %Y') %></time>
           </li>
         <% end %>
       </ol>
