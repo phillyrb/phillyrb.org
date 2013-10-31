@@ -1,0 +1,11 @@
+{
+  "name": "phillyrb",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "2.0.3",
+    "fitvids": "1.0.0",
+    "requirejs": "2.1.8",
+    "underscore": "1.5.2",
+    "moment": "2.4.0"
+  }
+}
