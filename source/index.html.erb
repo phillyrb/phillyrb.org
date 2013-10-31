@@ -10,31 +10,8 @@ title: Philly.rb
 
 <div class="wrapper">
   <section class="next-event">
-    <article class="next-event-information">
-      <header>
-        <h1>Our Next Event</h1>
-        <h2>November Monthly Meeting</h2>
-        <h3><time>Tues, Nov. 12th, 6pm</time></h3>
-      </header>
-
-      <h4>Comcast Center</h4>
-      <p class="address"><a href="https://www.google.com/maps?q=Comcast+Center,+John+F+Kennedy+Boulevard,+Philly,+PA&hl=en&ll=39.954129,-75.168478&spn=0.010428,0.023378&sll=41.993169,-71.216463&sspn=0.010111,0.023378&oq=comcast+center+phill&hnear=Comcast+Corporate+Office,+1701+John+F+Kennedy+Blvd,+Philadelphia,+Pennsylvania+19103&t=m&z=17">1701 John F. Kennedy Blvd Philadelphia, PA</a></p>
-
-      <h4>Code Review &ndash; Trevor Menagh</h4>
-      <p>Today, so many projects, both open and closed source suffer from lack
-      of quality. Many of us are aware of the importance of testing in our
-      development processes, but code review is something that is often
-      overlooked or misunderstood.</p>
-
-      <p>What does it mean to review code? Find bugs? Complain about tabs vs.
-      spaces? Or something more?
-      <a href="http://www.meetup.com/Phillyrb/events/147882902/" class="more">More</a></p>
-      <a href="http://www.meetup.com/Phillyrb/events/147882902/" class="rsvp">RSVP on Meetup</a>
-    </article>
-
-    <div class="next-event-map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Comcast+Center,+John+F+Kennedy+Boulevard,+Philly,+PA&amp;aq=0&amp;oq=comcast+center+phill&amp;sll=41.993169,-71.216463&amp;sspn=0.010111,0.023378&amp;ie=UTF8&amp;hq=&amp;hnear=Comcast+Corporate+Office,+1701+John+F+Kennedy+Blvd,+Philadelphia,+Pennsylvania+19103&amp;ll=39.954127,-75.168475&amp;spn=0.010428,0.023378&amp;t=m&amp;z=14&amp;output=embed"></iframe>
-    </div>
+    <article class="next-event-information"></article>
+    <div id="map" class="next-event-map"></div>
   </section>
 
   <ul class="about-phillyrb">
@@ -131,3 +108,30 @@ title: Philly.rb
     </ul>
   </section>
 </div>
+
+<script type="text/html" id="event-tmpl">
+  <header>
+    <h1>Our Next Event</h1>
+    <h2>{{ event.name }}</h2>
+    <h3><time>{{ event.time }}</time></h3>
+  </header>
+  <h4><a href="{{ event.mapUrl }}">{{ event.venueName }}</a></h4>
+  <p class="address">{{ event.address }}</p>
+  <div class="description">
+    {{ event.description }}
+  </div>
+  <a href="{{ event.url }}" class="rsvp">RSVP on Meetup</a>
+</script>
+
+<script type="text/html" id="event-map-tmpl">
+  <header>
+    <h1>{{ event.venueName }}</h1>
+  </header>
+  <p class="address">{{ event.address }}</p>
+</script>
+
+<script>
+  require(['app'], function (App) {
+    new App();
+  });
+</script>
