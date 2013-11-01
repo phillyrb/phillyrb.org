@@ -4,25 +4,29 @@ define('meetup', [
   $
 ) {
   var Meetup = function (options) {
-    this.initialize();
+    this.initialize(options);
   };
 
   Meetup.prototype.initialize = function (opts) {
-    this.apiKey = opts && opts.apiKey ? opts.apiKey : null;
-    this.apiHost = 'https://api.meetup.com/2/'
+    this.sigId = opts && opts.sigId ? opts.sigId : null;
+    this.sig = opts && opts.sig ? opts.sig : null;
+    this.apiHost = 'http://api.meetup.com/';
   };
 
   Meetup.prototype.events = function (opts) {
-    var url = 'events?&sign=true&group_urlname=phillyrb&page=20';
+    var path = 'events.json?radius=25.0&order=time&group_urlname=phillyrb&offset=0&format=json&page=200';
 
-    this._fetchData(url, opts);
+    this._fetchData(path, opts);
   };
 
-  Meetup.prototype._fetchData = function (url, opts) {
+  Meetup.prototype._fetchData = function (path, opts) {
     $.ajax({
-      url: this.apiHost + url + '&key=' + this.apiKey,
-      dataType : "jsonp",
+      url: this.apiHost + path + '&fields=&sig_id=' + this.sigId + '&sig=' + this.sig,
+      dataType: "jsonp",
       success: opts.success,
+      error: function () {
+        console.log('error');
+      }
     });
   };
 
