@@ -72,7 +72,7 @@ define('meetup_event_embedder', [
   };
 
   Embedder.prototype._locationQuery = function (evt) {
-    var query = evt.venue_name + ',' + this._formattedAddress(evt) + '+' + evt.venu_zip;
+    var query = evt.venue_name + ',' + this._formattedAddress(evt) + '+' + evt.venue_zip;
 
     return query.replace(/\s/g, '+');
   };
