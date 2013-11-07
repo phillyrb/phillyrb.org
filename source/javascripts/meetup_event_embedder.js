@@ -16,7 +16,6 @@ define('meetup_event_embedder', [
 
     self.template = $('#event-tmpl').html();
     self.container = $('article.next-event-information');
-    self.map = $('.next-event-map').find('iframe');
     self.meetup = new Meetup({
       sigId: 'TODO',
       sig: 'TODO'
@@ -42,12 +41,6 @@ define('meetup_event_embedder', [
     new MeetupMapEmbedder(evtObj);
   };
 
-  Embedder.prototype.buildIframeMap = function (evt) {
-    var iframeSrc = this._iframeSrc(evt);
-
-    this.map.attr('src', iframeSrc);
-  };
-
   Embedder.prototype._eventData = function (evt) {
     return {
       name: evt.name,
@@ -58,11 +51,6 @@ define('meetup_event_embedder', [
       address: this._formattedAddress(evt),
       description: evt.description,
     };
-  };
-
-  // WIP
-  Embedder.prototype._iframeSrc = function (evt) {
-    return 'https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + this._locationQuery(evt) + '&amp;aq=0&amp;oq=' + this._locationOq(evt) + '&amp;sll=' + evt.lat + ',' + evt.lon + 'ie=UTF8&amp;hq=&amp;hnear=' + this._locationQuery(evt) + '&amp;ll=' + evt.lat + ',' + evt.lon + '&amp;spn=0.010111,0.023378&amp;t=m&amp;z=14&amp;output=embed';
   };
 
   Embedder.prototype._getMapUrl = function (evt) {
