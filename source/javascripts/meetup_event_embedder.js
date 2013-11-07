@@ -16,10 +16,7 @@ define('meetup_event_embedder', [
 
     self.template = $('#event-tmpl').html();
     self.container = $('article.next-event-information');
-    self.meetup = new Meetup({
-      sigId: 'TODO',
-      sig: 'TODO'
-    });
+    self.meetup = new Meetup();
     self.meetup.events({
       success: function (data) {
         if (data && data.results) {
