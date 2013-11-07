@@ -1,9 +1,11 @@
 define('meetup_event_embedder', [
   'jquery',
-  'meetup'
+  'meetup',
+  'meetup_map_embedder'
 ], function (
   $,
-  Meetup
+  Meetup,
+  MeetupMapEmbedder
 ) {
   var Embedder = function () {
     this.initialize();
@@ -16,8 +18,8 @@ define('meetup_event_embedder', [
     self.container = $('article.next-event-information');
     self.map = $('.next-event-map').find('iframe');
     self.meetup = new Meetup({
-      sigId: 'ADD ME',
-      sig: 'ADD ME'
+      sigId: 'TODO',
+      sig: 'TODO'
     });
     self.meetup.events({
       success: function (data) {
@@ -29,9 +31,15 @@ define('meetup_event_embedder', [
   };
 
   Embedder.prototype.embed = function (evtObj) {
-    var html = _.template(this.template, { event: this._eventData(evtObj) });
+    var evt = this._eventData(evtObj),
+        html = _.template(this.template, { event: evt });
 
     this.container.html(html)
+    this.embedMap(evt);
+  };
+
+  Embedder.prototype.embedMap = function (evtObj) {
+    new MeetupMapEmbedder(evtObj);
   };
 
   Embedder.prototype.buildIframeMap = function (evt) {
@@ -48,7 +56,7 @@ define('meetup_event_embedder', [
       mapUrl: this._getMapUrl(evt),
       time: this._formattedTime(evt.time),
       address: this._formattedAddress(evt),
-      description: evt.description
+      description: evt.description,
     };
   };
 
