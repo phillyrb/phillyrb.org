@@ -19,7 +19,7 @@ define('meetup_event_embedder', [
     self.meetup = new Meetup();
     self.meetup.events({
       success: function (data) {
-        if (data && data.results) {
+        if (data && data.results && data.results.length > 0) {
           self.embed(data.results[0]);
         }
       }
