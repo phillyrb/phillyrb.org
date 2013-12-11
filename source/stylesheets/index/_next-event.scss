@@ -1,10 +1,13 @@
 .next-event {
   background: #fff;
-  @extend %slide-in-up;
+  display: none;
 
-  @include media($medium-screen) {
-    @include row(table);
-  };
+  &.loaded {
+    @extend %slide-in-up;
+    @include media($medium-screen) {
+      @include row(table);
+    }
+  }
 }
 
 .next-event-information {

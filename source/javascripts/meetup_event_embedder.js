@@ -15,12 +15,14 @@ define('meetup_event_embedder', [
     var self = this;
 
     self.template = $('#event-tmpl').html();
-    self.container = $('article.next-event-information');
+    self.root = $('.next-event-information');
+    self.container = self.root.find('article.next-event-information');
     self.meetup = new Meetup();
     self.meetup.events({
       success: function (data) {
         if (data && data.results && data.results.length > 0) {
           self.embed(data.results[0]);
+          self.container.addClass('loaded');
         }
       }
     });
