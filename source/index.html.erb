@@ -131,7 +131,9 @@ title: Philly.rb
 </script>
 
 <script>
-  require(['app'], function (App) {
-    new App();
+  $(document).ready(function () {
+    require(['app'], function (App) {
+      new App();
+    });
   });
 </script>
