@@ -12,7 +12,7 @@ define('meetup', [
   };
 
   Meetup.prototype.events = function (opts) {
-    var path = '/events.json?radius=25.0&order=time&group_urlname=phillyrb&offset=0&format=json&page=200&fields=&sig_id=85981882&sig=8e2446bfa10cfee4340f1441481163d1c7b255ff';
+    var path = '/2/events?status=upcoming&order=time&limited_events=False&group_urlname=phillyrb&desc=false&offset=0&format=json&page=20&fields=&sig_id=11822953&sig=8670ef3ef7ba48751cd01123b613f42576c444c1';
 
     this._fetchData(path, opts);
   };

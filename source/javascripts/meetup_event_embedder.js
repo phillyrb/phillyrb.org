@@ -15,14 +15,14 @@ define('meetup_event_embedder', [
     var self = this;
 
     self.template = $('#event-tmpl').html();
-    self.root = $('.next-event-information');
+    self.root = $('.next-event');
     self.container = self.root.find('article.next-event-information');
     self.meetup = new Meetup();
     self.meetup.events({
       success: function (data) {
         if (data && data.results && data.results.length > 0) {
           self.embed(data.results[0]);
-          self.container.addClass('loaded');
+          self.root.addClass('loaded');
         }
       }
     });
@@ -32,7 +32,7 @@ define('meetup_event_embedder', [
     var evt = this._eventData(evtObj),
         html = _.template(this.template, { event: evt });
 
-    this.container.html(html)
+    this.container.html(html);
     this.embedMap(evt);
   };
 
@@ -43,7 +43,7 @@ define('meetup_event_embedder', [
   Embedder.prototype._eventData = function (evt) {
     return {
       name: evt.name,
-      venueName: evt.venue_name,
+      venueName: evt.venue.name,
       url: this._url(evt),
       mapUrl: this._getMapUrl(evt),
       time: this._formattedTime(evt.time),
@@ -65,7 +65,7 @@ define('meetup_event_embedder', [
   };
 
   Embedder.prototype._formattedAddress = function (evt) {
-    return evt.venue_address1 + ', ' + evt.venue_city + ', ' + evt.venue_state;
+    return evt.venue.address_1 + ', ' + evt.venue.city + ', ' + evt.venue.state;
   };
 
   Embedder.prototype._formattedTime = function (time) {
