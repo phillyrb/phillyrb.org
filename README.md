@@ -1,9 +1,10 @@
-phillyrb.org
-============
+# phillyrb.org
+[![Build Status](https://travis-ci.org/phillyrb/phillyrb.org.png)](https://travis-ci.org/phillyrb/phillyrb.org)
 
 Official website for the Philadelphia Ruby user group
 
-# Find Us
+## Find Us
+
 * <http://phillyrb.org> - Our internet precense
 * <http://meetup.com/phillyrb> - Find out about our upcoming events
 * <http://twitter.com/phillyrb> - Tweet at us
