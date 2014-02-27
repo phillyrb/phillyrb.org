@@ -1,4 +1,20 @@
 language: ruby
 rvm:
-  - 2.1
-script: middleman build
+- 2.1
+before_install:
+- npm install bower
+install:
+- bower install
+- bundle install
+script: bundle exec middleman build
+deploy:
+  provider: s3
+  access_key_id: AKIAJIWQPPCTGBGRXEFA
+  secret_access_key:
+    secure: STu9EzqVc6W6NAjYvzPokVa7SqzfEoyJU/lPHZfE6zdgC/z8FfCYdW21+gyHM6BqlfnxyQZZOCfAFePItQHEjMowICpjgePsG10oiY3uQ7nNWWdROnWTA+SsFxNuliaQ7wrn4lSptc87lff96kZ6cKIndojfm1f7VGsIGcGCjdk=
+  bucket: beta.phillyrb.org
+  local-dir: build
+  skip_cleanup: true
+  on:
+    repo: phillyrb/phillyrb.org
+    all_branches: true
