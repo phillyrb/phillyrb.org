@@ -9,6 +9,7 @@ install:
 script: bundle exec middleman build
 deploy:
 - provider: s3
+  edge: true
   access_key_id: AKIAJIWQPPCTGBGRXEFA
   secret_access_key:
     secure: STu9EzqVc6W6NAjYvzPokVa7SqzfEoyJU/lPHZfE6zdgC/z8FfCYdW21+gyHM6BqlfnxyQZZOCfAFePItQHEjMowICpjgePsG10oiY3uQ7nNWWdROnWTA+SsFxNuliaQ7wrn4lSptc87lff96kZ6cKIndojfm1f7VGsIGcGCjdk=
@@ -19,6 +20,7 @@ deploy:
     repo: phillyrb/phillyrb.org
     all_branches: true
 - provider: s3
+  edge: true
   access_key_id: AKIAJIWQPPCTGBGRXEFA
   secret_access_key:
     secure: STu9EzqVc6W6NAjYvzPokVa7SqzfEoyJU/lPHZfE6zdgC/z8FfCYdW21+gyHM6BqlfnxyQZZOCfAFePItQHEjMowICpjgePsG10oiY3uQ7nNWWdROnWTA+SsFxNuliaQ7wrn4lSptc87lff96kZ6cKIndojfm1f7VGsIGcGCjdk=
