@@ -3,10 +3,6 @@ rvm:
 - 2.1
 before_install:
 - npm install bower
-install:
-- bower install
-- bundle install
-script: bundle exec middleman build
 deploy:
 - provider: s3
   edge: true
