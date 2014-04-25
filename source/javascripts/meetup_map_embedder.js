@@ -43,7 +43,7 @@ define('meetup_map_embedder', [
     this.marker = new google.maps.Marker({
       position: this.location,
       map: this.map,
-      title: 'Hello World!'
+      title: this.event.venueName
     });
   };
 
