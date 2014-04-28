@@ -55,11 +55,11 @@ define('meetup_event_embedder', [
   Embedder.prototype._getMapUrl = function (evt) {
     var query = this._locationQuery(evt);
 
-    return 'https://maps.google.com/?q=' + query + '&ll=' + evt.lat + ',' + evt.lon;
+    return 'https://maps.google.com/?q=' + query + '&ll=' + evt.venue.lat + ',' + evt.venue.lon;
   };
 
   Embedder.prototype._locationQuery = function (evt) {
-    var query = evt.venue_name + ',' + this._formattedAddress(evt) + '+' + evt.venue_zip;
+    var query = evt.venue.name + ',' + this._formattedAddress(evt) + '+' + evt.venue.zip;
 
     return query.replace(/\s/g, '+');
   };
