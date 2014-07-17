@@ -8,6 +8,9 @@ gem "nokogiri"
 
 gem "bourbon"
 gem "neat"
+gem "rspec"
+gem "capybara"
+gem "capybara-webkit"
 
 group :development do
   # Live-reloading plugin
