@@ -18,3 +18,7 @@
 
 # Ignore bower_components
 /bower_components
+
+npm-debug.log
+node_modules
+coverage

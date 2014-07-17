@@ -1,7 +1,5 @@
 define('meetup', [
-  'jquery'
 ], function (
-  $
 ) {
   var Meetup = function () {
     this.initialize();

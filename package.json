@@ -1,0 +1,17 @@
+{
+  "name": "phillyrb.org",
+  "devDependencies": {
+    "karma": "^0.12.16",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "^0.2.4",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-requirejs": "^0.2.2",
+    "markdown-pdf": "^3.0.1",
+    "requirejs": "^2.1.14"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --single-run",
+    "karma": "./node_modules/karma/bin/karma start"
+  }
+}
