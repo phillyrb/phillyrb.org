@@ -1,5 +1,5 @@
 define('meetup_event_embedder', [
-  'meetup',
+  'source/javascripts/meetup',
   'meetup_map_embedder'
 ], function (
   Meetup,

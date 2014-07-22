@@ -1,8 +1,6 @@
-define('meetup_spec', [
-  'meetup'
-], function (
-  Meetup
-) {
+define('spec/javascripts/meetup_spec', [
+  'source/javascripts/meetup'
+], function (Meetup) {
 
   alert('inside meetup spec')
 
