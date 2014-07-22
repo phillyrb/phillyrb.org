@@ -1,9 +1,7 @@
 define('meetup_event_embedder', [
-  'jquery',
   'meetup',
   'meetup_map_embedder'
 ], function (
-  $,
   Meetup,
   MeetupMapEmbedder
 ) {

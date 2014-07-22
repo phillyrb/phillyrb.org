@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Thu Jul 17 2014 11:53:41 GMT-0400 (EDT)
+// Generated on Thu May 15 2014 16:24:28 GMT-0400 (EDT)
 
 module.exports = function(config) {
   config.set({
@@ -13,23 +13,19 @@ module.exports = function(config) {
     frameworks: ['jasmine', 'requirejs'],
 
 
+
     // list of files / patterns to load in the browser
-    files: [
-      { pattern: 'bower_components/jquery/jquery.js', included: false },
-      { pattern: 'bower_components/moment/moment.js', included: false },
-      { pattern: 'bower_components/underscore/underscore.js', included: false },
-      { pattern: 'source/javascripts/**/*.js', included: false },
-      { pattern: 'spec/javascripts/**/*.js', included: false },
-      'spec/test-main.js'
-      /*
-      'bower_components/jquery/jquery.js',
-      'bower_components/moment/moment.js',
-      'bower_components/underscore/underscore.js',
-      'test-main.js',
-      'source/javascripts/*.js',
-      'spec/javascripts/*.js'
-      */
-    ],
+    files: [{
+      pattern: 'bower_components/jquery/jquery.js'
+    }, {
+      pattern: 'bower_components/underscore/underscore.js'
+    }, {
+      pattern: 'bower_components/moment/moment.js'
+    }, {
+      pattern: 'source/javascripts/**/*.js'
+    }, {
+      pattern: 'spec/**/*.js'
+    }],
 
 
     // list of files to exclude
@@ -44,9 +40,17 @@ module.exports = function(config) {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
-      'source/javascripts/*.js': ['coverage']
+      'surfnperf.js': ['coverage']
     },
 
+    coverageReporter: {
+      reporters: [{
+        type: 'html',
+        dir: 'coverage/'
+      }, {
+        type: 'text-summary'
+      }],
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -73,7 +77,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS', 'Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

@@ -1,7 +1,5 @@
 define('meetup_map_embedder', [
-  'jquery'
 ], function (
-  $
 ) {
   var Map = function (event) {
     this.initialize(event);
