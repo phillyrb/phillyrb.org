@@ -1,0 +1,23 @@
+#!/bin/sh
+
+log () {
+  echo
+  echo "** $@"
+}
+
+set -e
+
+# Ruby
+log "Installing bundler"
+gem install bundler --no-ri --no-rdoc
+log "Installing gem dependencies"
+bundle install
+
+# Javascript
+log "Updating homebrew"
+brew update
+log "Installing node"
+brew install node || log "Already installed."
+log "Installing javascript dependencies"
+npm install bower
+bower install
