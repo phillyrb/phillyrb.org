@@ -3,6 +3,11 @@
 
 Official website for the Philadelphia Ruby user group
 
+## Install dependencies
+```sh
+script/newb
+```
+
 ## Find Us
 
 * <http://phillyrb.org> - Our internet precense
