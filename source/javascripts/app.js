@@ -1,5 +1,5 @@
-define('app', [
-  'meetup_event_embedder'
+define('source/javascripts/app', [
+  'source/javascripts/meetup_event_embedder'
 ], function (
   MeetupEventEmbedder
 ) {

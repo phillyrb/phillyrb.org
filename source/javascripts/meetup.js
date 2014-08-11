@@ -1,8 +1,4 @@
-define('meetup', [
-  'jquery'
-], function (
-  $
-) {
+define('source/javascripts/meetup', [], function () {
   var Meetup = function () {
     this.initialize();
   };
