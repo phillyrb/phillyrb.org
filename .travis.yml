@@ -6,7 +6,9 @@ before_install:
 install:
 - bower install
 - bundle install
-script: bundle exec middleman build
+script:
+- bundle exec middleman build
+- rake
 deploy:
 - provider: s3
   edge: true
