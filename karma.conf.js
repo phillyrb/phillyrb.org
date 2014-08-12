@@ -30,7 +30,8 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      'source/javascripts/all.js'
+      'source/javascripts/all.js',
+      'source/javascripts/require_config.js'
     ],
 
 

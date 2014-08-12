@@ -1,6 +1,6 @@
 define('spec/javascripts/app_spec', [
-  'source/javascripts/app',
-  'source/javascripts/meetup_event_embedder'
+  'app',
+  'meetup_event_embedder'
 ], function (
   App,
   MeetupEventEmbedder

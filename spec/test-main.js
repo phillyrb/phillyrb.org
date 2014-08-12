@@ -14,9 +14,13 @@ Object.keys(window.__karma__.files).forEach(function(file) {
 
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
-  baseUrl: '/base',
+  baseUrl: '',
 
   shim: {},
+
+  paths: {
+    'moment': 'bower_components/moment/moment'
+  },
 
   // dynamically load all test files
   deps: allTestFiles,

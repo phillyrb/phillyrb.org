@@ -1,4 +1,4 @@
-define('source/javascripts/meetup_map_embedder', [
+define('meetup_map_embedder', [
 ], function (
 ) {
   var Map = function (event) {

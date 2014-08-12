@@ -1,6 +1,6 @@
-define('source/javascripts/meetup_event_embedder', [
-  'source/javascripts/meetup',
-  'source/javascripts/meetup_map_embedder'
+define('meetup_event_embedder', [
+  'meetup',
+  'meetup_map_embedder'
 ], function (
   Meetup,
   MeetupMapEmbedder
