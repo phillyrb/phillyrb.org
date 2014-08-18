@@ -1,5 +1,5 @@
 define('spec/javascripts/meetup_spec', [
-  'source/javascripts/meetup'
+  'meetup'
 ], function (Meetup) {
 
   describe('Meetup', function () {

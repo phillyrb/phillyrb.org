@@ -1,4 +1,4 @@
-define('source/javascripts/meetup', [], function () {
+define('meetup', [], function () {
   var Meetup = function () {
     this.initialize();
   };
