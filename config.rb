@@ -53,6 +53,8 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
+activate :build_reporter
+
 page "/feed.xml", :layout => false
 
 set :css_dir, 'stylesheets'
