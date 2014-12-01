@@ -4,6 +4,7 @@ source 'http://rubygems.org'
 
 gem "middleman"
 gem "middleman-blog"
+gem "middleman-build-reporter"
 gem "nokogiri"
 
 gem "bourbon"
