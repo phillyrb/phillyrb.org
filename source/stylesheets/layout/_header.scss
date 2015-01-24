@@ -5,6 +5,7 @@ header.main {
   text-align: center;
 
   @include media(em(680)) {
+    margin-top: 50px;
     text-align: left;
   };
 
