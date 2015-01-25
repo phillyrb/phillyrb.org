@@ -13,9 +13,9 @@ test: deps
 	rake
 
 deps:
-	@which -s gem npm || (echo "Ruby and Node.js required";  exit 1)
-	@which -s bundle || gem install bundler
-	@which -s bower || npm install bower
+	@which gem npm || (echo "Ruby and Node.js required";  exit 1)
+	@which bundle || gem install bundler
+	@which bower || npm install bower
 	bundle check || bundle install
 	npm install
 	bower install
