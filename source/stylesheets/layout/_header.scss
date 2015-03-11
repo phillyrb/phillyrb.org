@@ -53,7 +53,7 @@ header.main {
   }
 
   .logo {
-    @include position(absolute, .65em 50% 0 0);
+    @include position(absolute, .65em 50% auto auto);
 
     .index & {
       @extend %slide-in-down;
