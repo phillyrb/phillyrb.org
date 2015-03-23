@@ -9,5 +9,5 @@ Official website for the Philadelphia Ruby user group
 * <http://meetup.com/phillyrb> - Find out about our upcoming events
 * <http://twitter.com/phillyrb> - Tweet at us
 * <http://vimeo.com/phillyrb> - Watch past talks
-* \#philly.rb on freenode  - Chat with us
+* <http://phillydev.org> - Chat with us
 * <http://goo.gl/yv0aVN> - Our Mailing list
