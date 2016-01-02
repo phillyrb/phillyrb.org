@@ -15,9 +15,9 @@ test: deps
 deps:
 	@which gem npm || (echo "Ruby and Node.js required";  exit 1)
 	@which bundle || gem install bundler
-	@which bower || npm install bower
+	@which bower || npm install -g bower
 	bundle check || bundle install
 	npm install
-	bower install
+	CI=true bower install
 
 .PHONY: all build test deps
