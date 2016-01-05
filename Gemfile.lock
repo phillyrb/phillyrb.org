@@ -1,3 +1,20 @@
+GIT
+  remote: git://github.com/iamjarvo/middleman-build-reporter.git
+  revision: b1f4d16030f97b266929e3511931e049a8e0ede1
+  branch: support-middleman-4
+  specs:
+    middleman-build-reporter (0.0.4)
+      git (= 1.2.8)
+      middleman-core (>= 3.0.0)
+
+GIT
+  remote: git://github.com/middleman/middleman-sprockets.git
+  revision: 1177edb30c452211caca0a5751f59c1816320807
+  specs:
+    middleman-sprockets (4.0.0.rc.1)
+      middleman-core (>= 4.0.0.rc.1)
+      sprockets (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -12,6 +29,7 @@ GEM
     bourbon (4.2.6)
       sass (~> 3.4)
       thor (~> 0.19)
+    builder (3.2.2)
     capybara (2.5.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -64,9 +82,6 @@ GEM
       addressable (~> 2.4.0)
       middleman-core (>= 4.0.0)
       tzinfo (>= 0.3.0)
-    middleman-build-reporter (0.0.4)
-      git (= 1.2.8)
-      middleman-core (>= 3.0.0)
     middleman-cli (4.0.0)
       thor (>= 0.17.0, < 2.0)
     middleman-core (4.0.0)
@@ -88,17 +103,15 @@ GEM
       sass (>= 3.4)
       tilt (~> 1.4.1)
       uglifier (~> 2.6)
-    middleman-livereload (3.1.1)
-      em-websocket (>= 0.2.0)
-      middleman-core (>= 3.0.2)
-      multi_json (~> 1.0)
-      rack-livereload
+    middleman-livereload (3.4.5)
+      em-websocket (~> 0.5.1)
+      middleman-core (>= 3.3)
+      rack-livereload (~> 0.3.15)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2015.1120)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
-    multi_json (1.11.2)
     neat (1.7.2)
       bourbon (>= 4.0)
       sass (>= 3.3)
@@ -132,6 +145,8 @@ GEM
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
     sass (3.4.20)
+    sprockets (3.4.1)
+      rack (> 1, < 3)
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -148,15 +163,17 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  builder
   capybara
   capybara-webkit
   middleman
   middleman-blog
-  middleman-build-reporter
-  middleman-livereload (~> 3.1.0)
+  middleman-build-reporter!
+  middleman-livereload
+  middleman-sprockets!
   neat
   nokogiri
   rspec
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
