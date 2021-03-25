@@ -1,3 +1,7 @@
+require "middleman-build-reporter"
+require "middleman-sprockets"
+require "middleman-livereload"
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -56,6 +60,7 @@ activate :blog do |blog|
 end
 
 activate :build_reporter
+activate :sprockets
 
 page "/feed.xml", :layout => false
 
