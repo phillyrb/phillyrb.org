@@ -62,7 +62,7 @@ GEM
     hashie (3.6.0)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    json (1.8.6)
+    json (2.5.1)
     kramdown (1.17.0)
     listen (3.5.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -163,7 +163,7 @@ DEPENDENCIES
   bourbon (~> 4.2.6)
   builder (~> 3.2.2)
   capybara (~> 2.5.0)
-  json (~> 1.8.6)
+  json (~> 2.5.1)
   middleman (~> 4.0.0)
   middleman-blog (~> 4.0.0)
   middleman-build-reporter!
