@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/iamjarvo/middleman-build-reporter.git
+  remote: https://github.com/iamjarvo/middleman-build-reporter.git
   revision: b1f4d16030f97b266929e3511931e049a8e0ede1
   branch: support-middleman-4
   specs:
@@ -8,7 +8,7 @@ GIT
       middleman-core (>= 3.0.0)
 
 GIT
-  remote: git://github.com/middleman/middleman-sprockets.git
+  remote: https://github.com/middleman/middleman-sprockets.git
   revision: 5e5197c3e4049845c446dc2b30d0169f2b3c6070
   specs:
     middleman-sprockets (4.1.1)
@@ -107,19 +107,21 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0225)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.8.0)
     minitest (5.14.4)
     neat (1.7.4)
       bourbon (>= 4.0)
       sass (>= 3.3)
-    nokogiri (1.6.8.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.13.4)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.13.3.4)
       tilt (>= 1.4.1, < 3)
     padrino-support (0.13.3.4)
       activesupport (>= 3.1)
+    racc (1.6.0)
     rack (1.6.13)
     rack-livereload (0.3.17)
       rack
@@ -170,7 +172,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.4.5)
   middleman-sprockets!
   neat (~> 1.7.2)
-  nokogiri (< 1.7)
+  nokogiri (< 1.14)
   rspec (~> 3.4.0)
 
 BUNDLED WITH
