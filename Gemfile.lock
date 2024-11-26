@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/iamjarvo/middleman-build-reporter.git
+  remote: https://github.com/iamjarvo/middleman-build-reporter.git
   revision: b1f4d16030f97b266929e3511931e049a8e0ede1
   branch: support-middleman-4
   specs:
@@ -8,7 +8,7 @@ GIT
       middleman-core (>= 3.0.0)
 
 GIT
-  remote: git://github.com/middleman/middleman-sprockets.git
+  remote: https://github.com/middleman/middleman-sprockets.git
   revision: 5e5197c3e4049845c446dc2b30d0169f2b3c6070
   specs:
     middleman-sprockets (4.1.1)
@@ -148,7 +148,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (1.4.1)
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
