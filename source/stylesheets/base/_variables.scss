@@ -1,7 +1,7 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: "franklin-gothic-urw", $helvetica;
-$serif: "abril-text", $georgia;
+$sans-serif: "franklin-gothic-urw", $font-stack-helvetica;
+$serif: "abril-text", $font-stack-georgia;
 
 $base-font-family: $serif;
 $header-font-family: $sans-serif;

@@ -1,5 +1,3 @@
-require "middleman-build-reporter"
-require "middleman-sprockets"
 require "middleman-livereload"
 
 ###
@@ -59,9 +57,6 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-activate :build_reporter
-activate :sprockets
-
 page "/feed.xml", :layout => false
 
 set :css_dir, 'stylesheets'
@@ -73,7 +68,7 @@ set :images_dir, 'images'
 activate :directory_indexes
 
 # add bower_components to sprockets
-sprockets.append_path File.join "#{root}", "bower_components"
+# sprockets.append_path File.join "#{root}", "bower_components"
 
 # Build-specific configuration
 configure :build do
@@ -92,4 +87,3 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
-
