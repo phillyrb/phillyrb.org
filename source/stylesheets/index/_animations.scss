@@ -1,37 +1,37 @@
-@include keyframes(slide-in-down){
+@keyframes slide-in-down {
   0% {
     opacity: 0;
-    @include transform(translateY(-50px));
+    transform: translateY(-50px);
   }
 
   100% {
-    @include transform(translateY(0));
+    transform: translateY(0);
   }
 }
 
 %slide-in-down {
-  @include animation(slide-in-down);
-  @include animation-fill-mode(both);
-  @include animation-duration(.6s);
+  animation-name: slide-in-down;
+  animation-fill-mode: both;
+  animation-duration: .6s;
 }
 
-@include keyframes(slide-in-up){
+@keyframes slide-in-up {
   0% {
-    @include transform(translateY(50px));
+    transform: translateY(50px);
   }
 
   100% {
-    @include transform(translateY(0));
+    transform: translateY(0);
   }
 }
 
 %slide-in-up {
-  @include animation(slide-in-up);
-  @include animation-fill-mode(both);
-  @include animation-duration(.6s);
+  animation-name: slide-in-up;
+  animation-fill-mode: both;
+  animation-duration: .6s;
 }
 
-@include keyframes(fade-in){
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -42,27 +42,27 @@
 }
 
 %fade-in {
-  @include animation(fade-in);
-  @include animation-fill-mode(both);
-  @include animation-duration(1.5s);
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
 }
 
-@include keyframes(bounce){
+@keyframes bounce {
   0% {
-    @include transform(translateY(0));
+    transform: translateY(0);
   }
 
   50% {
-    @include transform(translateY(-20px));
+    transform: translateY(-20px);
   }
 
   100% {
-    @include transform(translateY(0));
+    transform: translateY(0);
   }
 }
 
 %bounce {
-  @include animation(bounce);
-  @include animation-fill-mode(both);
-  @include animation-duration(.5s);
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: .5s;
 }

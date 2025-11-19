@@ -15,7 +15,7 @@
 
   h1 {
     @extend %fade-in;
-    @include animation-delay(.4s);
+    animation-delay: .4s;
     @include outer-container;
     color: rgba(#fff, .9);
     letter-spacing: -1px;

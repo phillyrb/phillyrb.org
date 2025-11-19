@@ -1,0 +1,60 @@
+// Helper functions and mixins to replace removed Bourbon features
+
+// em() function - converts pixels to em
+// Usage: em(16) or em(16, 24) for custom base
+@function em($pxval, $base: 16) {
+  @if not unitless($pxval) {
+    $pxval: strip-unit($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-unit($base);
+  }
+  @return ($pxval / $base) * 1em;
+}
+
+// strip-unit() function - removes unit from a value
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// hide-text() mixin - hides text accessibly
+@mixin hide-text() {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+// size() mixin - sets width and height
+// Usage: @include size(2em); or @include size(2em, 3em);
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// position() mixin - sets position and offsets
+// Usage: @include position(absolute, 1em 2em 3em 4em);
+@mixin position($position, $args) {
+  position: $position;
+
+  $offsets: top right bottom left;
+  @each $offset in $offsets {
+    $index: index($offsets, $offset);
+    $value: nth($args, $index);
+
+    @if $value != auto {
+      #{$offset}: $value;
+    }
+  }
+}
+
+// inline-block() mixin - displays element as inline-block
+@mixin inline-block() {
+  display: inline-block;
+}
+
+// linear-gradient() mixin - creates a linear gradient background
+// Usage: @include linear-gradient(#color1, #color2);
+@mixin linear-gradient($color1, $color2) {
+  background: $color1;
+  background: linear-gradient(to bottom, $color1 0%, $color2 100%);
+}
