@@ -45,7 +45,7 @@
         display: block;
         background-repeat: no-repeat;
         background-position: center center;
-        height: 100px;
+        height: 160px;
         background-size: 70%;
       }
     }
@@ -60,6 +60,14 @@
 
     &.thoughtbot a {
       background-image: image-url('thoughtbot.svg');
+    }
+
+    &.ombulabs a {
+      background-image: image-url('ombulabs.ai.svg');
+    }
+
+    &.code a {
+      background-image: image-url('code.jpeg');
     }
   }
 }
