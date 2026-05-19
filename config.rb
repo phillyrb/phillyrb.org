@@ -40,7 +40,6 @@ end
 # Time.zone = "UTC"
 
 activate :blog do |blog|
-   blog.prefix = "videos"
   # blog.permalink = ":year/:month/:day/:title.html"
   # blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
