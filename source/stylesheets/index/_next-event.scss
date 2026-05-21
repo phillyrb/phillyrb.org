@@ -22,20 +22,23 @@
     margin-bottom: 1em;
   }
 
-  h1 {
+  // Headings demoted one level so the page has a single h1 (the hero).
+  // h2 = "OUR NEXT EVENT" eyebrow, h3 = event name, h4 inside <header> = time,
+  // h4 outside <header> = venue.
+  h2 {
     @extend %section-header;
   }
 
-  h2 {
+  h3 {
     @extend %primary-header;
   }
 
-  h3 {
+  header h4 {
     font-weight: normal;
     margin-bottom: 2em;
   }
 
-  h4 {
+  > h4 {
     line-height: $base-line-height;
   }
 
