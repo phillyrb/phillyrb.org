@@ -17,4 +17,4 @@ jobs:
         with:
           bundler-cache: true
 
-      - run: make build
+      - run: bundle exec middleman build
