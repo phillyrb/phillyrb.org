@@ -17,4 +17,11 @@ jobs:
         with:
           bundler-cache: true
 
-      - run: bundle exec middleman build
+      - name: Build site
+        run: bundle exec middleman build
+
+      # Runs the content specs and the axe-core accessibility specs. The
+      # accessibility specs serve the build/ output produced above, so the
+      # build must run first.
+      - name: Run tests (RSpec, incl. axe-core accessibility checks)
+        run: bundle exec rspec
