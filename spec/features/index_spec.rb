@@ -6,7 +6,7 @@ describe 'index', type: :feature do
   end
 
   it "displays the correct title header" do
-    expect(page).to have_selector('h1.logo a[href="/"]', text: 'Philly.rb')
+    expect(page).to have_selector('.logo a[href="/"]', text: 'Philly.rb')
   end
 
   it "displays a hero with the correct mission statement" do
@@ -18,7 +18,7 @@ describe 'index', type: :feature do
   context 'the "about" sections it displays' do
     context 'the "Network" section' do
       it 'displays the proper heading' do
-        expect(page).to have_selector('li.network h1',
+        expect(page).to have_selector('li.network h2',
           text: 'Network'
         )
       end
@@ -32,7 +32,7 @@ describe 'index', type: :feature do
 
     context 'the "Learn" section' do
       it 'displays the proper heading' do
-        expect(page).to have_selector('li.learn h1',
+        expect(page).to have_selector('li.learn h2',
           text: 'Learn'
         )
       end
@@ -46,7 +46,7 @@ describe 'index', type: :feature do
 
     context 'the "Socialize" section' do
       it 'displays the proper heading' do
-        expect(page).to have_selector('li.socialize h1',
+        expect(page).to have_selector('li.socialize h2',
           text: 'Socialize'
         )
       end

@@ -1,8 +1,37 @@
 .hero {
-  background: image-url('philly-header.jpg') no-repeat 80%;
-  background-size: cover;
+  // The photo is rendered as an <img> element so axe-core does not pick it up
+  // when computing background contrast for the text content. A separate
+  // solid-color .hero-scrim div darkens the photo without using a CSS gradient
+  // (which axe also treats as ambiguous bg).
+  position: relative;
+  background-color: #141414;
   padding: 4em 2em;
   text-align: center;
+  overflow: hidden;
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 80% center;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(20, 20, 20, 0.6);
+    pointer-events: none;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 2;
+  }
 
   @include media($medium-screen) {
     padding: 8em 2em;
@@ -17,7 +46,8 @@
     @extend %fade-in;
     animation-delay: .4s;
     @include outer-container;
-    color: rgba(#fff, .9);
+    // Solid white instead of rgba(...0.9) so axe doesn't have to alpha-blend.
+    color: #fff;
     letter-spacing: -1px;
     line-height: 1.1em;
 
@@ -25,5 +55,20 @@
       font-size: em(38);
       max-width: em(1000, 36);
     };
+  }
+
+  h2 {
+    color: #fff;
+
+    a {
+      // Link inside the dark hero needs an explicit light color, else inherits
+      // the global $blue link color which fails contrast on the dark scrim.
+      color: #fff;
+      text-decoration: underline;
+
+      &:hover {
+        color: rgba(#fff, 0.85);
+      }
+    }
   }
 }
