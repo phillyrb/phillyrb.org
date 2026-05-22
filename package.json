@@ -1,6 +1,8 @@
 {
   "name": "phillyrb.org",
   "devDependencies": {
+    "axe-core": "^4.10.2",
+    "http-server": "^14.1.1",
     "karma": "0.12.31",
     "karma-chrome-launcher": "^0.1.4",
     "karma-coverage": "^0.2.4",
@@ -8,10 +10,12 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-requirejs": "^0.2.2",
     "markdown-pdf": "^3.0.1",
+    "puppeteer": "^22.15.0",
     "requirejs": "^2.1.14"
   },
   "scripts": {
     "test": "./node_modules/karma/bin/karma start --single-run",
-    "karma": "./node_modules/karma/bin/karma start"
+    "karma": "./node_modules/karma/bin/karma start",
+    "test:a11y": "bundle exec rake a11y"
   }
 }
