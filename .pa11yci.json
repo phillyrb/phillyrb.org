@@ -1,0 +1,23 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe", "htmlcs"],
+    "timeout": 60000,
+    "wait": 2500,
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--force-prefers-reduced-motion"
+      ]
+    },
+    "ignore": [
+      "warning",
+      "notice"
+    ]
+  },
+  "urls": [
+    "http://localhost:8765/",
+    "http://localhost:8765/videos/2013-06-11-five-ruby-things/"
+  ]
+}
