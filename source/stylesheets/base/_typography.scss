@@ -34,10 +34,75 @@ a {
     color: $hover-link-color;
   }
 
-  &:active, &:focus {
+  &:active, &:focus-visible {
     color: $hover-link-color;
+    outline: 2px solid $base-accent-color;
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  &:focus {
     outline: none;
   }
+}
+
+// Inline links inside body paragraphs need a non-color distinguisher.
+// Axe rule "link-in-text-block" flagged the unstyled inline links.
+p a,
+li > p a,
+h1 a,
+h2 a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+
+  &:hover {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// Respect prefers-reduced-motion: disable animations + transitions for users
+// who request reduced motion, AND enable automated a11y testers to bypass
+// timing-sensitive animations that otherwise interfere with contrast detection.
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Skip-to-main link — hidden off-screen until keyboard-focused.
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $base-accent-color;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  font-family: $header-font-family;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform 0.18s ease-out;
+  z-index: 1000;
+
+  &:focus,
+  &:focus-visible {
+    transform: translateY(0);
+    color: #fff;
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+  }
+}
+
+// Main landmark accepts focus from the skip-link; never show its own ring.
+main#main-content:focus {
+  outline: none;
 }
 
 hr {

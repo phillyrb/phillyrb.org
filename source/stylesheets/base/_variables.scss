@@ -17,9 +17,12 @@ $base-border-radius: em(5);
 
 $red: #dc4036;
 $blue: #1f5b98;
-$dark-gray: #787878;
-$medium-gray: #999;
-$light-gray: #bcbcbc;
+// Darkened for WCAG AA contrast on white bg.
+//   $dark-gray was #787878 (~4.45:1, just below 4.5) → #5e5e5e (~6.55:1)
+//   $light-gray was #bcbcbc (~1.9:1, large fail) → #6b6b6b (~5.17:1)
+$dark-gray: #5e5e5e;
+$medium-gray: #808080;
+$light-gray: #6b6b6b;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
