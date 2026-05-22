@@ -2,7 +2,7 @@
   @include row;
   @extend %section-vertical-padding;
 
-  h1 {
+  h2 {
     @extend %section-header;
   }
 }

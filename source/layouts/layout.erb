@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -22,11 +22,13 @@
 
   <body class="<%= page_classes %>">
 
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <%= partial "layouts/header" %>
 
-    <section class="main">
+    <main id="main-content" class="main" tabindex="-1">
       <%= yield %>
-    </section>
+    </main>
 
     <%= partial "layouts/footer" %>
 

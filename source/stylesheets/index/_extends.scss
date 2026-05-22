@@ -19,7 +19,7 @@
       margin-bottom: 0;
     };
 
-    h1 {
+    h2 {
       text-align: center;
 
       @include media(min-width $small-screen max-width $medium-screen) {

@@ -3,30 +3,32 @@ title: "Philly.rb | The One and Only Philadelphia Ruby User Group"
 ---
 
 <section class="hero">
+  <img class="hero-photo" src="images/philly-header.jpg" alt="" aria-hidden="true">
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrapper">
     <h1>Philly.rb is the one and only user group in Philadelphia dedicated to helping Ruby enthusiasts learn, network, and socialize.</h1>
     <hr>
-    <h1>Check us out on <a href="https://www.meetup.com/phillyrb" target="_blank">Meetup</a> to join our next event</h1>
+    <h2>Check us out on <a href="https://www.meetup.com/phillyrb" target="_blank" rel="noopener noreferrer">Meetup</a> to join our next event</h2>
   </div>
 </section>
 
 <div class="wrapper">
-  <section class="next-event">
+  <section class="next-event" aria-label="Next event">
     <article class="next-event-information"></article>
-    <div id="map" class="next-event-map"></div>
+    <div id="map" class="next-event-map" aria-hidden="true"></div>
   </section>
 
   <ul class="about-phillyrb">
     <li class="network">
-      <h1>Network</h1>
+      <h2>Network</h2>
       <p>Gain access to a growing community of Ruby programmers and enthusiasts. </p>
     </li>
     <li class="learn">
-      <h1>Learn</h1>
+      <h2>Learn</h2>
       <p>Our monthly presentations are great for gaining in-depth knowledge on current Ruby and Rails topics. </p>
     </li>
     <li class="socialize">
-      <h1>Socialize</h1>
+      <h2>Socialize</h2>
       <p>Between pub nights and our lunches, we have plenty of chances to get together and shoot the shit.</p>
     </li>
   </ul>
@@ -35,48 +37,48 @@ title: "Philly.rb | The One and Only Philadelphia Ruby User Group"
 
   <ul class="connect-with">
     <li>
-      <h1>#phillyrb on PhillyDev Slack</h1>
-      <p>Chat with some of our community members on our PhillyDev Slack channel. <a href="http://phillydev.org/">Join PhillyDev Slack</a></p>
+      <h2>#phillyrb on PhillyDev Slack</h2>
+      <p>Chat with some of our community members on our PhillyDev Slack channel. <a target="_blank" rel="noopener noreferrer" href="http://phillydev.org/">Join PhillyDev Slack</a></p>
     </li>
     <li>
-      <h1>@phillyrb</h1>
-      <p>All community updates and new events are promoted from our twitter account. <a href="http://twitter.com/phillyrb">Follow @phillyrb</a></p>
+      <h2>@phillyrb</h2>
+      <p>All community updates and new events are promoted from our twitter account. <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/phillyrb">Follow @phillyrb</a></p>
     </li>
     <li>
-      <h1>Meetup</h1>
-      <p>We announce all meetups over here: <a href="https://www.meetup.com/phillyrb/">Join Philly.rb on Meetup</a></p>
+      <h2>Meetup</h2>
+      <p>We announce all meetups over here: <a target="_blank" rel="noopener noreferrer" href="https://www.meetup.com/phillyrb/">Join Philly.rb on Meetup</a></p>
     </li>
   </ul>
 
   <hr />
 
-  <section class="sponsors">
-    <h1>Please thank our sponsors. Without them this all wouldn&rsquo;t be possible.</h1>
+  <section class="sponsors" aria-label="Sponsors">
+    <h2>Please thank our sponsors. Without them this all wouldn&rsquo;t be possible.</h2>
     <ul>
-      <li class="sponsor ombulabs"><a href="https://www.ombulabs.ai">OmbuLabs.ai</a></li>
-      <li class="sponsor code"><a href="https://podcast.drbragg.dev">Code and the Coding Coders who Code It Podcast</a></li>
+      <li class="sponsor ombulabs"><a target="_blank" rel="noopener noreferrer" href="https://www.ombulabs.ai">OmbuLabs.ai</a></li>
+      <li class="sponsor code"><a target="_blank" rel="noopener noreferrer" href="https://podcast.drbragg.dev">Code and the Coding Coders who Code It Podcast</a></li>
       <li class="contact"><p>Looking to become a sponsor or host? <a href="mailto:ernesto@ombulabs.com">Contact us</a></p></li>
     </ul>
   </section>
 
   <hr />
 
-  <section class="badges">
-    <h1>Throw one of these badges up on your site and show your membership with pride.</h1>
+  <section class="badges" aria-label="Membership badges">
+    <h2>Throw one of these badges up on your site and show your membership with pride.</h2>
     <ul>
-      <li><img src="/images/member-badge-full-color.png" alt="" /></li>
-      <li><img src="/images/member-badge-red.png" alt="" /></li>
-      <li><img src="/images/ruby-bell-full-color.png" alt="" /></li>
-      <li><img src="/images/ruby-bell-red.png" alt="" /></li>
+      <li><img src="/images/member-badge-full-color.png" alt="Philly.rb member badge, full color" /></li>
+      <li><img src="/images/member-badge-red.png" alt="Philly.rb member badge, red" /></li>
+      <li><img src="/images/ruby-bell-full-color.png" alt="Philly.rb ruby bell, full color" /></li>
+      <li><img src="/images/ruby-bell-red.png" alt="Philly.rb ruby bell, red" /></li>
     </ul>
   </section>
 </div>
 
 <script type="text/html" id="event-tmpl">
   <header>
-    <h1>Our Next Event</h1>
-    <h2>{{ event.name }}</h2>
-    <h3><time>{{ event.time }}</time></h3>
+    <h2>Our Next Event</h2>
+    <h3>{{ event.name }}</h3>
+    <h4><time>{{ event.time }}</time></h4>
   </header>
   <h4><a href="{{ event.mapUrl }}">{{ event.venueName }}</a></h4>
   <p class="address">{{ event.address }}</p>
@@ -88,7 +90,7 @@ title: "Philly.rb | The One and Only Philadelphia Ruby User Group"
 
 <script type="text/html" id="event-map-tmpl">
   <header>
-    <h1>{{ event.venueName }}</h1>
+    <h2>{{ event.venueName }}</h2>
   </header>
   <p class="address">{{ event.address }}</p>
 </script>
