@@ -33,6 +33,15 @@
     z-index: 2;
   }
 
+  // At wide viewports the hero pulls the following content up over its dark
+  // base (margin-bottom: -7em below). The photo/scrim are positioned with a
+  // z-index, so without lifting the overlapping content above them the
+  // about-section icons get clipped by the scrim.
+  + .wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
   @include media($medium-screen) {
     padding: 8em 2em;
   };
