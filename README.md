@@ -1,5 +1,5 @@
 # phillyrb.org
-[![Build Status](https://travis-ci.org/phillyrb/phillyrb.org.png)](https://travis-ci.org/phillyrb/phillyrb.org)
+[![Build](https://github.com/phillyrb/phillyrb.org/actions/workflows/build.yml/badge.svg)](https://github.com/phillyrb/phillyrb.org/actions/workflows/build.yml)
 
 Official website for the Philadelphia Ruby user group
 
